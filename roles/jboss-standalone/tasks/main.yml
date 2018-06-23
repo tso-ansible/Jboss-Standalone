@@ -15,8 +15,9 @@
 #    dest: /apps/jboss-poc/jboss-as-7.1.1.Final.zip
 
 - name: copy jboss
-  src: jboss-as-7.1.1.Final.zip
-  dest: /apps/jboss-poc/jboss-as-7.1.1.Final.zip  
+  copy:
+    src: jboss-as-7.1.1.Final.zip
+    dest: /apps/jboss-poc/jboss-as-7.1.1.Final.zip  
 
 - name: Extract archive
   unarchive: 
