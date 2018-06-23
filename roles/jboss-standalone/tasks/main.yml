@@ -14,6 +14,11 @@
 #    url: http://download.jboss.org/jbossas/7.1/jboss-as-7.1.1.Final/jboss-as-7.1.1.Final.zip 
 #    dest: /apps/jboss-poc/jboss-as-7.1.1.Final.zip
 
+- name: Create apps folder
+  file:
+    path: /{{ apps_folder }}/{{ jboss_folder }}/{{ test1_folder }}
+    state: directory
+
 - name: copy jboss
   copy:
     src: jboss-as-7.1.1.Final.zip
